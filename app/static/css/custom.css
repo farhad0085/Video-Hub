@@ -1,0 +1,110 @@
+.card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    /* HOVER OFF */
+    transition: all 0.5s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 60px 10px green;
+    transition: all 0.5s ease-in-out;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.search-btn {
+
+    padding-right: 15px;
+    padding-left: 15px;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.navbar {
+    margin-bottom: 10px;
+}
+
+.btn-login {
+
+    margin-left: 8px;
+    margin-right: 4px;
+    padding-right: 15px;
+    padding-left: 15px;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn-signup {
+
+    margin-left: 4px;
+    padding-right: 15px;
+    padding-left: 15px;
+    transition: all 0.5s ease-in-out;
+}
+
+.video-title{
+    font-weight: bold;
+    margin: 10px 10px 5px 5px;
+}
+
+.video-link{
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.video-link:hover{
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.video-description{
+    margin: 20px 10px 5px 5px;
+}
+
+.video-description-dashboard{
+    color: #cccccc;
+}
+
+.uploader-title{
+    font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+    .card-img-top {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .card {
+        margin-left: 1px;
+        margin-right: 1px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+
+    .btn-login {
+
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 4px;
+        padding-right: 15px;
+        padding-left: 15px;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .btn-signup {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        padding-left: 15px;
+        transition: all 0.5s ease-in-out;
+    }
+}

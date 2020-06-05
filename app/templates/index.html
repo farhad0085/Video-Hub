@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{% if videos %}
+<div class="row">
+{% for video in videos %}
+    
+        <div class="col col-md-4 col-sm-12">
+        <div class="card bg-light">
+            <img class="card-img-top" src="{{ url_for('static', filename='thumbs/'+ video.video_thumb) }}" alt="Thumbnail">
+            <div class="card-body text-center">
+                <h5 class="card-title"><a href="{{ url_for('view_video', video_id=video.id) }}" class="card-link">{{ video.video_title }}</a></h5>
+                <p class="card-text">{{ video.video_description[:160] }}</p>
+            </div>
+        </div>
+        </div>
+    
+{% endfor %}
+</div>
+{% else %}
+    <div class="alert alert-warning" role="alert">
+    You don't have uploaded any video!</div>
+{% endif %}
+
+{% endblock %}
