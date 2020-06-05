@@ -60,7 +60,7 @@ def login():
     form = LoginForm()
     if form.validate_on_submit():
         # make sure the user exists in database
-        user = User.query.filter_by(email=form.email.data).first()
+        user = User.query.filter_by(username=form.username.data).first()
 
         if user and bcrypt.check_password_hash(user.password, form.password.data):
             # this will do the whole user session for us
@@ -69,7 +69,7 @@ def login():
             next_page = request.args.get('next')
             return redirect(next_page) if next_page else redirect(url_for('dashboard'))
         else:
-            flash('Email or Password Error!', 'danger')
+            flash('Username or Password Error!', 'danger')
     return render_template('login.html', title="User Login", form=form)
 
 
